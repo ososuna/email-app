@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import EmailDetails from '../model/EmailDetails';
+import { useEmail } from '../hooks/useEmail';
 
 defineProps<{ msg: string }>();
+
+const { sendEmail } = useEmail();
 
 const emailDetails = ref({
   recipient: '',
@@ -10,8 +13,9 @@ const emailDetails = ref({
   subject: ''
 } as EmailDetails);
 
-const sendEmail = () => {
-  console.log(emailDetails.value);
+const onSubmit = async() => {
+  const { message } = await sendEmail(emailDetails.value);
+  alert(message);
 };
 
 </script>
@@ -20,7 +24,7 @@ const sendEmail = () => {
   <h1>{{ msg }}</h1>
   <div class="card">
     <div>
-      <form @submit.prevent="sendEmail" autocomplete="off">
+      <form @submit.prevent="onSubmit" autocomplete="off">
         <input type="email" placeholder="Recipient" v-model="emailDetails.recipient"/><br><br>
         <input type="text" placeholder="Subject" v-model="emailDetails.subject" /><br><br>
         <textarea placeholder="Message" rows="10" cols="30" v-model="emailDetails.msgBody"></textarea><br>

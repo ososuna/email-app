@@ -2,7 +2,7 @@ import emailApi from "../api/emailApi";
 import EmailDetails from '../model/EmailDetails';
 import axios from 'axios';
 
-export const useBook = () => {
+export const useEmail = () => {
   const sendEmail = async (emailDetails: EmailDetails) => {
     try {
       await emailApi.post('', emailDetails);
@@ -17,6 +17,6 @@ export const useBook = () => {
     }
   }
   return {
-
+    sendEmail
   }
 }
