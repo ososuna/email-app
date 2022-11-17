@@ -8,27 +8,16 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
-
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+    <div>
+      <form>
+        <input type="email" placeholder="Recipient" /><br><br>
+        <input type="text" placeholder="Subject" /><br><br>
+        <textarea placeholder="Message" rows="10" cols="30"></textarea><br>
+      </form>
+    </div><br>
+    <button type="submit">Send</button>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped>
