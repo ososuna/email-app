@@ -6,7 +6,7 @@ export const useEmail = () => {
   const sendEmail = async (emailDetails: EmailDetails) => {
     try {
       await emailApi.post('', emailDetails);
-      return { ok: true, message: 'Email sent successfully &#129303' }
+      return { ok: true, message: 'Email sent successfully' }
     } catch ( error ) {
       if ( axios.isAxiosError( error ) ) {
         const { message } = error.response?.data as any || 'An error has occurred';
