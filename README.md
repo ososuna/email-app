@@ -1,5 +1,5 @@
 # Email APP
-✉️ Email APP with Vue 3 + TypeScript + Vite
+✉️ Email APP with Vue 3 + TypeScript + Vite named The New Pied Piper
 
 <img width="300" src="https://media.giphy.com/media/26ufeYWInLG5hBv9e/giphy.gif"/>
 
