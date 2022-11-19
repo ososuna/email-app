@@ -1,16 +1,48 @@
-# Vue 3 + TypeScript + Vite
+# Email APP
+✉️ Email APP with Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<img width="300" src="https://media.giphy.com/media/26ufeYWInLG5hBv9e/giphy.gif"/>
 
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-## Type Support For `.vue` Imports in TS
+## Requirements
+For building and running the application you need:
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+- [Node 16.14.0](https://nodejs.org/download/release/v16.14.0/)
+- [Yarn 1.22.17](https://classic.yarnpkg.com/lang/en/docs/install/)
+## Running the application locally
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+### Install dependencies
+```shell
+yarn
+```
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+### Run the app
+```shell
+yarn dev
+```
+
+## Try it out with Docker
+
+First, build the application:
+
+```shell
+yarn build
+```
+
+Then you need to build the Docker image:
+
+```shell
+docker build -t email-app .
+```
+  
+Now you can run the image:
+  
+```shell
+docker run --name email-app -p 3000:3000 email-app
+```
+
+## Architecture Diagram
+<img width="500" src="assets/Architecture_Diagram.png"/>
