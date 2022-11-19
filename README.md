@@ -5,7 +5,7 @@
 
 ## Email API
 This project is a client for the Email API. You can find the API here:
-https://github.com/ososuna/email-app.git
+https://github.com/ososuna/email-api.git
 
 ## Recommended IDE Setup
 
