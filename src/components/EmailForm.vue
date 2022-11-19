@@ -8,7 +8,7 @@ defineProps<{ msg: string }>();
 const { sendEmail } = useEmail();
 
 const emailDetails = ref({
-  recipient: 'oswaldo.adrian35@gmail.com',
+  recipient: 'ososuna@thenewpiedpiper.com',
   msgBody: '',
   subject: ''
 } as EmailDetails);
@@ -29,7 +29,7 @@ const onSubmit = async() => {
   <div class="card">
     <div>
       <form @submit.prevent="onSubmit" autocomplete="off">
-        <input type="email" readonly placeholder="To: oswaldo.adrian35@gmail.com"/><br><br>
+        <input type="email" readonly placeholder="To: ososuna@thenewpiedpiper.com"/><br><br>
         <input type="text" placeholder="Subject" v-model="emailDetails.subject" /><br><br>
         <textarea placeholder="Message" rows="10" cols="30" v-model="emailDetails.msgBody"></textarea><br>
         <button type="submit">Send</button>
