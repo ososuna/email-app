@@ -3,6 +3,10 @@
 
 <img width="300" src="https://media.giphy.com/media/26ufeYWInLG5hBv9e/giphy.gif"/>
 
+## Email API
+This project is a client for the Email API. You can find the API here:
+https://github.com/ososuna/email-app.git
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
